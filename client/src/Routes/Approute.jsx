@@ -6,6 +6,7 @@ import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
 import RootLayout from "../layout/RootLayout";
 import Properties from "../pages/Properties";
+import SearchPropertyPage from "../pages/SearchPropertyPage";
 
 export default function Approute() {
   const route = [
@@ -30,6 +31,10 @@ export default function Approute() {
         {
           path: "properties",
           element: <Properties />,
+        },
+        {
+          path: "/search-properties",
+          element: <SearchPropertyPage />,
         },
       ],
     },
