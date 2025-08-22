@@ -8,7 +8,7 @@ import morgan from "morgan";
 const app = express();
 const allowedOrigins = [
   "http://localhost:5173", // for local dev
-  "https://beta-house-pink-eight.vercel.app/", // your deployed frontend
+  "https://beta-house-pink-eight.vercel.app", // your deployed frontend
 ];
 
 app.use(
