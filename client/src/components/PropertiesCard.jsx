@@ -27,7 +27,7 @@ export default function PropertyCard({
     <div className="border border-gray-300 rounded-lg shadow-sm overflow-hidden bg-white">
       <div className="relative">
         <img
-          src={`http://localhost:4400/uploads/${image}`}
+          src={`https://betahouse-fbp8.onrender.com/uploads/${image}`}
           alt={title}
           className="w-full h-48 object-cover"
         />

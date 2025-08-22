@@ -101,7 +101,7 @@ const DiscoverPropertySection = () => {
                     {group.map((property) => (
                       <DiscoverPropertyCard
                         key={property._id}
-                        image={`http://localhost:4400/uploads/${property.image}`}
+                        image={`https://betahouse-fbp8.onrender.com/uploads/${property.image}`}
                         title={property.title}
                         price={`₦${Number(property.price).toLocaleString()}`}
                         details={property.details}
