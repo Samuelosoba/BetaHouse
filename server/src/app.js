@@ -6,13 +6,17 @@ import path from "path";
 import cors from "cors";
 import morgan from "morgan";
 const app = express();
-const corsOptions = {
-  origin: ["http://localhost:5173"],
-  optionsSuccessStatus: 200,
-  methods: ["GET", "POST", "PATCH", "DELETE"],
-  credentials: true,
-};
-app.use(cors(corsOptions));
+const allowedOrigins = [
+  "http://localhost:5173", // for local dev
+  "https://beta-house-qjkfkaa3u-samuels-projects-e534d71a.vercel.app", // your deployed frontend
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // if you're sending cookies or tokens
+  })
+);
 app.use(morgan("dev"));
 app.use(json({ limit: "25mb" }));
 app.use(express.urlencoded({ extended: true, limit: "25mb" }));
