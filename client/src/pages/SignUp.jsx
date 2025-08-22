@@ -28,7 +28,7 @@ export default function SignUp() {
         password: data.password,
       });
 
-      navigate("/");
+      navigate("/auth/signin");
       console.log("Success:", res.data);
       alert(res.data.message);
     } catch (err) {
