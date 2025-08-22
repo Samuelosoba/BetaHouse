@@ -13,9 +13,9 @@ export default function PropertiesSection() {
     const fetchProperties = async () => {
       try {
         const res = await getAllProperties();
-         console.log("FULL RESPONSE:", res.data); // call the API
+         console.log("FULL RESPONSE:", res.data); 
         setProperties(res.data);
-        console.log("IMAGE VALUE:", properties.image); // assuming API returns an array
+        console.log("IMAGE VALUE:", properties.image); 
       } catch (error) {
         console.error("Failed to fetch properties:", error);
       } finally {

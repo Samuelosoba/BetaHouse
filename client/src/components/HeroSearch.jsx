@@ -8,12 +8,12 @@ const HeroSearch = () => {
   const [type, setType] = useState("");
   const [bedrooms, setBedrooms] = useState(0);
   const [properties, setProperties] = useState([]);
-  const navigate = useNavigate(); // ✅ useNavigate hook
+  const navigate = useNavigate();
 
   const handleSearch = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:4400/api/properties/search",
+        "https://betahouse-fbp8.onrender.com/api/properties/search",
         {
           params: {
             title: type,
@@ -25,8 +25,7 @@ const HeroSearch = () => {
 
       setProperties(res.data || []);
 
-      // ✅ Navigate to /properties with search query (optional)
-      navigate("/search-properties", {
+      navigate("search-properties", {
         state: {
           results: res.data,
           query: { type, location, bedrooms },

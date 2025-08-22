@@ -17,7 +17,7 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Get user from localStorage
+
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -44,7 +44,7 @@ export default function Nav() {
           onClick={() => navigate("/")}
         />
 
-        {/* Hamburger - Mobile Only */}
+       
         <button
           className="text-white md:hidden focus:outline-none"
           onClick={toggleMenu}
@@ -72,7 +72,7 @@ export default function Nav() {
           </svg>
         </button>
 
-        {/* Desktop Nav Links */}
+    
         <ul className="hidden md:flex space-x-6 items-center">
           <li>
             <a href="#home" className="hover:underline">

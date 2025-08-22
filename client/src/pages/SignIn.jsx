@@ -20,18 +20,18 @@ export default function SignIn() {
         password: data.password,
       });
 
-      console.log("✅ Login successful:", res.data);
+      console.log(" Login successful:", res.data);
       alert(res.data.message);
 
-      // ✅ Save user and token in localStorage
+    
       localStorage.setItem("user", JSON.stringify(res.data.user));
       localStorage.setItem("token", res.data.accessToken);
 
-      // Optional: Redirect user after login
+     
       navigate("/");
     } catch (err) {
       console.error(
-        "❌ Login error:",
+        " Login error:",
         err?.response?.data?.message || err.message
       );
       alert(err?.response?.data?.message || "Login failed");

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-green-900 text-white pt-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 pb-10">
-        {/* BetaHouse Info */}
+      
         <div className="space-y-4">
          <img src={Logo} alt="" className="w-30" />
           <p className="text-sm mb-4">

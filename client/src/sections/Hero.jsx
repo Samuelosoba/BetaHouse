@@ -28,7 +28,7 @@ export default function HeroPage({ onSearch }) {
             Start browsing now!
           </p>
 
-          {/* Responsive Search */}
+         
           <div className="w-full max-w-2xl mx-auto mt-24 lg:mt-24">
             <HeroSearch />
           </div>

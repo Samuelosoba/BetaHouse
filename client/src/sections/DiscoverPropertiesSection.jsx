@@ -3,7 +3,7 @@ import DiscoverPropertyCard from "../components/DiscoverPropertiesCard";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { getPopularProperties } from "../api/property";
 
-// Utility: chunk properties into groups
+
 const chunkArray = (arr, size) => {
   const result = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -16,12 +16,12 @@ const DiscoverPropertySection = () => {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch properties from API
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await getPopularProperties();
-        setProperties(res.data); // Ensure res.data is an array
+        setProperties(res.data); 
       } catch (err) {
         console.error("Error fetching popular properties:", err);
       } finally {
@@ -46,7 +46,7 @@ const DiscoverPropertySection = () => {
         <p className="text-center">No properties found.</p>
       ) : (
         <>
-          {/* Mobile Carousel (1 per slide) */}
+       
           <div className="block md:hidden">
             <div className="carousel w-full">
               {mobileSlides.map((group, idx) => (
@@ -66,7 +66,7 @@ const DiscoverPropertySection = () => {
                     />
                   ))}
 
-                  {/* Buttons */}
+                 
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
                     <a
                       href={`#mob-slide${
@@ -88,7 +88,7 @@ const DiscoverPropertySection = () => {
             </div>
           </div>
 
-          {/* Desktop Carousel (4 per slide) */}
+       
           <div className="hidden md:block">
             <div className="carousel w-full">
               {desktopSlides.map((group, idx) => (
@@ -110,7 +110,7 @@ const DiscoverPropertySection = () => {
                     ))}
                   </div>
 
-                  {/* Buttons */}
+               
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
                     <a
                       href={`#desk-slide${

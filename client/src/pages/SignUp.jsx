@@ -29,10 +29,10 @@ export default function SignUp() {
       });
 
       navigate("/");
-      console.log("✅ Success:", res.data);
+      console.log("Success:", res.data);
       alert(res.data.message);
     } catch (err) {
-      console.error("❌ Error:", err?.response?.data?.message || err.message);
+      console.error("Error:", err?.response?.data?.message || err.message);
       alert(err?.response?.data?.message || "Registration failed");
     }
   };
