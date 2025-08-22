@@ -6,7 +6,6 @@ export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [user, setUser] = useState(null);
 
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
