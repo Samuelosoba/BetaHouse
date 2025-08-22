@@ -28,7 +28,7 @@ export default function SignIn() {
       localStorage.setItem("token", res.data.accessToken);
 
       // Optional: Redirect user after login
-      navigate("/properties");
+      navigate("/");
     } catch (err) {
       console.error(
         "❌ Login error:",

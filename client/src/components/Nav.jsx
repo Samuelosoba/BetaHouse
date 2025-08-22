@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../assets/Logo.png";
+import { useNavigate } from "react-router";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +37,12 @@ export default function Nav() {
     >
       <div className="flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <img src={Logo} alt="Logo" className="w-28 md:w-32" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="w-28 md:w-32"
+          onClick={() => navigate("/")}
+        />
 
         {/* Hamburger - Mobile Only */}
         <button
@@ -113,10 +120,16 @@ export default function Nav() {
             </div>
           ) : (
             <>
-              <button className="px-5 py-2 border border-white rounded-md">
+              <button
+                className="px-5 py-2 border border-white rounded-md"
+                onClick={() => navigate("/auth/signin")}
+              >
                 Sign in
               </button>
-              <button className="px-5 py-2 rounded-md bg-[#3D9970]">
+              <button
+                className="px-5 py-2 rounded-md bg-[#3D9970]"
+                onClick={() => navigate("/auth/signup")}
+              >
                 Sign up
               </button>
             </>
@@ -172,10 +185,16 @@ export default function Nav() {
               </div>
             ) : (
               <>
-                <button className="w-full px-4 py-2 border border-white rounded-md">
+                <button
+                  className="w-full px-4 py-2 border border-white rounded-md"
+                  onClick={() => navigate("/auth/signin")}
+                >
                   Sign in
                 </button>
-                <button className="w-full px-4 py-2 rounded-md bg-[#3D9970]">
+                <button
+                  className="w-full px-4 py-2 rounded-md bg-[#3D9970]"
+                  onClick={() => navigate("/auth/signup")}
+                >
                   Sign up
                 </button>
               </>

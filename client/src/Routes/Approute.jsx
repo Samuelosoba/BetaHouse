@@ -29,7 +29,7 @@ export default function Approute() {
       element: <RootLayout />,
       children: [
         {
-          path: "properties",
+          path: "",
           element: <Properties />,
         },
         {

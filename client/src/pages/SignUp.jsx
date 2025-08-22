@@ -6,11 +6,12 @@ import {
   validatePassword,
   validateConfirmPassword,
   validatefullname,
-} from "../hooks/formValidate"
+} from "../hooks/formValidate";
 import axiosInstance from "../hooks/axiosInstance"; // adjust path if different
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -27,7 +28,7 @@ export default function SignUp() {
         password: data.password,
       });
 
-      // You can save token or redirect here
+      navigate("/");
       console.log("✅ Success:", res.data);
       alert(res.data.message);
     } catch (err) {
@@ -183,13 +184,12 @@ export default function SignUp() {
 
         {/* Already have account */}
         <Link to={"/auth/signin"}>
-        
-        <p className="text-center text-sm mt-1">
-          Already have an account?{" "}
-          <span className="text-[#3D9970] underline cursor-pointer">
-            Sign in
-          </span>
-        </p>
+          <p className="text-center text-sm mt-1">
+            Already have an account?{" "}
+            <span className="text-[#3D9970] underline cursor-pointer">
+              Sign in
+            </span>
+          </p>
         </Link>
       </form>
     </div>

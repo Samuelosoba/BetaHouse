@@ -38,7 +38,7 @@ const HeroSearch = () => {
   };
 
   return (
-    <div className="w-full px-4 py-10 bg-white shadow-lg rounded-lg max-w-7xl mx-auto -mt-20 relative z-10">
+    <div className="w-full px-4 py-5 bg-white/10 backdrop-blur-md shadow-lg rounded-lg max-w-7xl mx-auto -mt-20 relative z-10">
       {/* Search Form */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-white p-4 rounded-lg shadow-md">
         <div>
